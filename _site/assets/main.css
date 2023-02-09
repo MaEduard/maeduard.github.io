@@ -194,3 +194,31 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vg { color: #008080; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
+
+ /* Style all font awesome icons */
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+} 
