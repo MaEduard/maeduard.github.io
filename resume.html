@@ -8,6 +8,7 @@
         body {
             background-color: black;
             color: aquamarine;
+            font-family: monospace;
         }
 
         a {
@@ -66,6 +67,125 @@
             font-family:monospace;
         }
 
+        p {
+            max-width: 700px;
+        }
+
+    /* Timeline Container */
+    .timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+    }
+
+    /* Card container */
+    .card {
+    position: relative;
+    max-width: 500px;
+    }
+
+    /* setting padding based on even or odd */
+    .card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+    }
+    .card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+    }
+    /* Global ::before */
+    .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: dashed #a00;
+    }
+
+    /* Setting the border of top, bottom, left */
+    .card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    }
+
+    /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+    @media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+    }
+
+    /* Setting the border of top, bottom, right */
+    .card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+    }
+
+    /* Removing the border if it is the first card */
+    .card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's odd */
+    .card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's even */
+    .card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    }
+
+    /* Information about the timeline */
+    .info {
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    }
+
+    /* Title of the card */
+    .title {
+    color: #a00;
+    position: relative;
+    }
+
+    /* Timeline dot  */
+    .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: aquamarine;
+    border-radius: 999px;
+    border: 3px solid #a00;
+    }
+
+    /* text right if the card is even  */
+    .card:nth-child(even) > .info > .title {
+    text-align: right;
+    }
+
+    /* setting dot to the left if the card is odd */
+    .card:nth-child(odd) > .info > .title::before {
+    left: -45px;
+    }
+
+    /* setting dot to the right if the card is odd */
+    .card:nth-child(even) > .info > .title::before {
+    right: -45px;
+    }
+
     </style>
 </head>
 
@@ -99,7 +219,7 @@
 
 
 <div class="container">
-    <img src="./images/me.jpeg" alt="Me and a new friend I made in Greece" class="image">
+    <img src="images/me.jpeg" alt="Me and a new friend I made in Greece" class="image">
     <p class="text">Since the dawn of molecular biology, there has been a paradigm
         shift from biology being very descriptive towards becoming very
         quantitative. High-resolution imaging and sequencing techniques
@@ -118,14 +238,105 @@ ________________________________________________________________________________
 
 * EDUCATION .............................................................. [<a class=t href=#001>001</a>]
 * PROJECTS ............................................................... [<a class=t href=#002>002</a>]
-* SIDE-ACTIVITIES ........................................................ [<a class=t href=#001>001</a>]
-* REFEREES ............................................................... [<a class=t href=#002>002</a>]
+* SIDE-ACTIVITIES ........................................................ [<a class=t href=#003>003</a>]
+* REFEREES ............................................................... [<a class=t href=#004>004</a>]
 
 
 <span id=001>[<a class=t href=#001>001</a>]</span> EDUCATION
+
+</pre>
+
+<div class="timeline">
+    <div class="outer">
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Msc Computer Science [2022-2024] - TU Delft</h3>
+          <ul>
+            <li>Master thesis: In Silico Screening of Long-Read Sequencing Data for Endogenous Viral Elements in Alzheimer’s Disease Patients And Centenarians (9.5/10) under the supervision of Prof. Dr. Ir. Reinders and Dr. N. Tesi (to be published).</li>
+            <li>Graduated with honours</li>
+            <li>Cum laude</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Computer Science and Engineering pre-master [2020-2022] - TU Delft</h3>
+          
+          Followed the following courses (and passed):
+          <ul>
+            <li>Object-oriented Programming</li>
+            <li>Algorithms & Data Structures</li>
+            <li>Reasoning & Logic</li>
+            <li>Software Quality & Testing</li>
+            <li>Web- and Database Technology</li>
+            <li>Information and Data management</li>
+            <li>Automata, Computability, and Complexity</li>
+            <li>Software Engineering Methods</li>
+            <li>Machine Learning</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Bsc Nanobiology [2018-2020] - TU Delft & Erasmus University Rotterdam</h3>
+          <ul>
+            <li>The three-year Nanobiology program is fundamentally interdisciplinary: it gives a thorough grounding in physics and mathematics, focusing on biomedical science and nanoscience.</li>
+            <li> Bachelor thesis: Multipolar mitosis detection in brightfield imaging data (8.5/10). The research was conducted at the Chien lab in the Erasmus Medical Center Rotterdam under the supervision of L. You (postdoc) and Dr. M.P. Chien </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title"> Erasmus exchange [2020] - TU Munich</h3>
+            <p>6 months exchange, I have attended many courses of the MSc Biomedicine and Nutrition and the MSc Biomedical Computing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Gymnasium - Het Goese Lyceum</h3>
+          <p>Dutch highschool track that prepares for science university degree (NT/NG). Research project: Sustainability of electric cars (9.0/10). </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+<pre>
 ________________________________________________________________________________
 
-To be finished soon..
+<span id=002>[<a class=t href=#002>002</a>]</span> PROJECTS
+
+</pre>
+<p>At the moment I am working on many side projects, like <a href="https://github.com/MaEduard/maeduard.github.io">the website</a> you are cur-
+rently visiting, for example. Because most projects are work in progress, they are a bit of a mess to show directly here but as soon as they are presetable, I will share them here. A descriptive list is given nevertheless:</p>
+
+<ul>
+    <li>FastTree algorithm implemenation (Python) </li>
+    <li>Network inference data processing pipeline (Python) </li>
+    <li>Genomic alignment project (Python, bedtools, samtools, DIAMOND, BLAST) </li>
+    <li>Detection of multipolar mitosis in brightfield imaging data (MATLAB, ImageJ)</li>
+    <li>Online Chess game (Javascript, CSS, HTML)</li>
+    <li>TU Delft's sport centre scheduling system (Java)</li>
+    <li>NCBC Website (WordPress)</li>
+    <li>Deep Learning Risk Analysis project (Python, Pytorch, Google Cloud)</li>
+    <li>Modelling the emissions of the train network of China's Belt \& Road initiative - ING (Python)</li>
+</ul>
+
+<pre>
+
+________________________________________________________________________________
+
+
+<span id=003>[<a class=t href=#003>003</a>]</span> SIDE-ACTIVITIES
+
+________________________________________________________________________________
+
+
+<span id=004>[<a class=t href=#004>004</a>]</span> REFEREES
+
+</pre>
+<p>If interested in a list of people that I have worked for or collaborated with, do not hesitate to reach out to me via the <a href=./contact.html>contact page</a>. Due to privacy reasons, I do not share it here.</p>
+<pre>
 ________________________________________________________________________________
 
    ···········································································
