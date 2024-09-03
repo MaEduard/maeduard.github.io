@@ -5,186 +5,189 @@
     <meta charset="utf-8">
     <title>Eduard's webpage!</title>
     <style>
-        body {
-            background-color: black;
-            color: aquamarine;
-            font-family: monospace;
-        }
+      body {
+          background-color: black;
+          color: aquamarine;
+          font-family: monospace;
+      }
 
-        a {
-            color: #34d5eb;
-        }
+      a {
+          color: #34d5eb;
+      }
 
-        pre {
-            margin: 0;
-            overflow-x:hidden
-        }
+      pre {
+          margin: 0;
+          overflow-x:hidden
+      }
 
-        .t {
-            text-decoration: none;
-        }
+      .t {
+          text-decoration: none;
+      }
 
+      h4 {
+        color:#a00;
+      }
 
-        .nav-container {
-            display: flex;
-            justify-content: flex-start; /* Evenly distribute space between items */
-            align-items: center; /* Align items vertically in the center */
-        }
+      .nav-container {
+          display: flex;
+          justify-content: flex-start; /* Evenly distribute space between items */
+          align-items: center; /* Align items vertically in the center */
+      }
 
-        .nav-container a {
-        margin-right: 23px; /* Optional: Add space between items */
-        }
+      .nav-container a {
+      margin-right: 23px; /* Optional: Add space between items */
+      }
 
-        #g {
-            filter: invert(1);
-            text-decoration: none;
-        }
+      #g {
+          filter: invert(1);
+          text-decoration: none;
+      }
 
-        img,
-        #b {
-            max-width: 80ch
-        }
+      img,
+      #b {
+          max-width: 80ch
+      }
 
-        span {
-            display: inline-block;
-        }
+      span {
+          display: inline-block;
+      }
 
-        .container {
-        background-color: black;
-        width: 565px;
-        display: flex;
-        align-items:center; /* Vertically center the items */
-        }
+      .container {
+      background-color: black;
+      width: 565px;
+      display: flex;
+      align-items:center; /* Vertically center the items */
+      }
 
-        .image {
-            width: 200px; /* Adjust as needed */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 16px; /* Space between the image and text */
-        }
+      .image {
+          width: 200px; /* Adjust as needed */
+          height: auto; /* Maintain aspect ratio */
+          margin-right: 16px; /* Space between the image and text */
+      }
 
-        .text {
-            margin: 0; /* Remove default margins */
-            font-family:monospace;
-        }
+      .text {
+          margin: 0; /* Remove default margins */
+          font-family:monospace;
+      }
 
-        p {
-            max-width: 700px;
-        }
+      p {
+          max-width: 700px;
+      }
 
-    /* Timeline Container */
-    .timeline {
-    background: var(--primary-color);
-    margin: 20px auto;
-    padding: 20px;
-    }
+      /* Timeline Container */
+      .timeline {
+      background: var(--primary-color);
+      margin: 20px auto;
+      padding: 20px;
+      }
 
-    /* Card container */
-    .card {
-    position: relative;
-    max-width: 500px;
-    }
+      /* Card container */
+      .card {
+      position: relative;
+      max-width: 500px;
+      }
 
-    /* setting padding based on even or odd */
-    .card:nth-child(odd) {
-    padding: 30px 0 30px 30px;
-    }
-    .card:nth-child(even) {
-    padding: 30px 30px 30px 0;
-    }
-    /* Global ::before */
-    .card::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    border: dashed #a00;
-    }
+      /* setting padding based on even or odd */
+      .card:nth-child(odd) {
+      padding: 30px 0 30px 30px;
+      }
+      .card:nth-child(even) {
+      padding: 30px 30px 30px 0;
+      }
+      /* Global ::before */
+      .card::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      border: dashed #a00;
+      }
 
-    /* Setting the border of top, bottom, left */
-    .card:nth-child(odd)::before {
-    left: 0px;
-    top: -4.5px;
-    bottom: -4.5px;
-    border-width: 5px 0 5px 5px;
-    border-radius: 50px 0 0 50px;
-    }
+      /* Setting the border of top, bottom, left */
+      .card:nth-child(odd)::before {
+      left: 0px;
+      top: -4.5px;
+      bottom: -4.5px;
+      border-width: 5px 0 5px 5px;
+      border-radius: 50px 0 0 50px;
+      }
 
-    /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
-    @media only screen and (max-width: 400px) {
-    .card:nth-child(odd)::before {
-        top: -5px;
-        bottom: -5px;
-    }
-    }
+      /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+      @media only screen and (max-width: 400px) {
+      .card:nth-child(odd)::before {
+          top: -5px;
+          bottom: -5px;
+      }
+      }
 
-    /* Setting the border of top, bottom, right */
-    .card:nth-child(even)::before {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-width: 5px 5px 5px 0;
-    border-radius: 0 50px 50px 0;
-    }
+      /* Setting the border of top, bottom, right */
+      .card:nth-child(even)::before {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: 5px 5px 5px 0;
+      border-radius: 0 50px 50px 0;
+      }
 
-    /* Removing the border if it is the first card */
-    .card:first-child::before {
-    border-top: 0;
-    border-top-left-radius: 0;
-    }
+      /* Removing the border if it is the first card */
+      .card:first-child::before {
+      border-top: 0;
+      border-top-left-radius: 0;
+      }
 
-    /* Removing the border if it is the last card  and it's odd */
-    .card:last-child:nth-child(odd)::before {
-    border-bottom: 0;
-    border-bottom-left-radius: 0;
-    }
+      /* Removing the border if it is the last card  and it's odd */
+      .card:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+      }
 
-    /* Removing the border if it is the last card  and it's even */
-    .card:last-child:nth-child(even)::before {
-    border-bottom: 0;
-    border-bottom-right-radius: 0;
-    }
+      /* Removing the border if it is the last card  and it's even */
+      .card:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      }
 
-    /* Information about the timeline */
-    .info {
-    font-family: monospace;
-    display: flex;
-    flex-direction: column;
-    background: transparent;
-    color: aquamarine;
-    border-radius: 10px;
-    padding: 10px;
-    }
+      /* Information about the timeline */
+      .info {
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+      color: aquamarine;
+      border-radius: 10px;
+      padding: 10px;
+      }
 
-    /* Title of the card */
-    .title {
-    color: #a00;
-    position: relative;
-    }
+      /* Title of the card */
+      .title {
+      color: #a00;
+      position: relative;
+      }
 
-    /* Timeline dot  */
-    .title::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: aquamarine;
-    border-radius: 999px;
-    border: 3px solid #a00;
-    }
+      /* Timeline dot  */
+      .title::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: aquamarine;
+      border-radius: 999px;
+      border: 3px solid #a00;
+      }
 
-    /* text right if the card is even  */
-    .card:nth-child(even) > .info > .title {
-    text-align: right;
-    }
+      /* text right if the card is even  */
+      .card:nth-child(even) > .info > .title {
+      text-align: right;
+      }
 
-    /* setting dot to the left if the card is odd */
-    .card:nth-child(odd) > .info > .title::before {
-    left: -45px;
-    }
+      /* setting dot to the left if the card is odd */
+      .card:nth-child(odd) > .info > .title::before {
+      left: -45px;
+      }
 
-    /* setting dot to the right if the card is odd */
-    .card:nth-child(even) > .info > .title::before {
-    right: -45px;
-    }
+      /* setting dot to the right if the card is odd */
+      .card:nth-child(even) > .info > .title::before {
+      right: -45px;
+      }
 
     </style>
 </head>
@@ -220,16 +223,11 @@
 
 <div class="container">
     <img src="images/me.jpeg" alt="Me and a new friend I made in Greece" class="image">
-    <p class="text">Since the dawn of molecular biology, there has been a paradigm
-        shift from biology being very descriptive towards becoming very
-        quantitative. High-resolution imaging and sequencing techniques
-        can nowadays record the behavior of thousands of cells simultaneously. How do we efficiently process all this data and how can
-        math and software help us to draw important conclusions from
-        these kinds of data? Thinking about these topics consumes a large
-        chunk of my day.<br>
+    <p class="text"> My main interests are software development & engineering + data analytics & engineering. It did not start out that way, however. I have been trained as a microbiologist.
+      During the COVID pandemic I was forced to work from home, which microbiologists do not really like. But, that forced me to start working computationally, rather than getting my hands dirty in the wetlab. That's how I got to know 
+      the field of computer science (CS). It was love at first sight. Because I liked developing so much, I decided to switch to CS. I still very much like to apply CS to biological data, and so most of my projects are dedicated to that.
 
-        Besides science, I also love reading and I have a keen interest in
-        national and global politics. Lastly, I recently found out what how much fun padel is!</p>
+      Besides science, I also love reading and I have a keen interest in politics. Lastly, I recently found out how much fun padel is!</p>
 </div>
 
 <pre>
@@ -239,8 +237,9 @@ ________________________________________________________________________________
 * EDUCATION .............................................................. [<a class=t href=#001>001</a>]
 * PROJECTS ............................................................... [<a class=t href=#002>002</a>]
 * SIDE-ACTIVITIES ........................................................ [<a class=t href=#003>003</a>]
-* REFEREES ............................................................... [<a class=t href=#004>004</a>]
-
+* (SIDE)-JOBS ............................................................ [<a class=t href=#004>004</a>]
+* REFEREES ............................................................... [<a class=t href=#005>005</a>]
+________________________________________________________________________________
 
 <span id=001>[<a class=t href=#001>001</a>]</span> EDUCATION
 
@@ -250,9 +249,9 @@ ________________________________________________________________________________
     <div class="outer">
       <div class="card">
         <div class="info">
-          <h3 class="title">Msc Computer Science [2022-2024] - TU Delft</h3>
+          <h4 class="title">Msc Computer Science [2022-2024] - TU Delft</h4>
           <ul>
-            <li>Master thesis: In Silico Screening of Long-Read Sequencing Data for Endogenous Viral Elements in Alzheimer’s Disease Patients And Centenarians (9.5/10) under the supervision of Prof. Dr. Ir. Reinders and Dr. N. Tesi (to be published).</li>
+            <li>Master thesis: In Silico Screening of Long-Read Sequencing Data for Endogenous Viral Elements in Alzheimer’s Disease Patients And Centenarians (9.5/10) under the supervision of Prof. Dr. Ir. Reinders and Dr. N. Tesi.</li>
             <li>Graduated with honours</li>
             <li>Cum laude</li>
           </ul>
@@ -260,7 +259,7 @@ ________________________________________________________________________________
       </div>
       <div class="card">
         <div class="info">
-          <h3 class="title">Computer Science and Engineering pre-master [2020-2022] - TU Delft</h3>
+          <h4 class="title">Computer Science and Engineering pre-master [2020-2022] - TU Delft</h4>
           
           Followed the following courses (and passed):
           <ul>
@@ -278,7 +277,7 @@ ________________________________________________________________________________
       </div>
       <div class="card">
         <div class="info">
-          <h3 class="title">Bsc Nanobiology [2018-2020] - TU Delft & Erasmus University Rotterdam</h3>
+          <h4 class="title">Bsc Nanobiology [2018-2020] - TU Delft & Erasmus University Rotterdam</h4>
           <ul>
             <li>The three-year Nanobiology program is fundamentally interdisciplinary: it gives a thorough grounding in physics and mathematics, focusing on biomedical science and nanoscience.</li>
             <li> Bachelor thesis: Multipolar mitosis detection in brightfield imaging data (8.5/10). The research was conducted at the Chien lab in the Erasmus Medical Center Rotterdam under the supervision of L. You (postdoc) and Dr. M.P. Chien </li>
@@ -287,13 +286,13 @@ ________________________________________________________________________________
       </div>
       <div class="card">
         <div class="info">
-          <h3 class="title"> Erasmus exchange [2020] - TU Munich</h3>
-            <p>6 months exchange, I have attended many courses of the MSc Biomedicine and Nutrition and the MSc Biomedical Computing.</p>
+          <h4 class="title"> Erasmus exchange [2020] - TU Munich</h4>
+            <p>6 months exchange during which I have attended many courses of the MSc Biomedicine and Nutrition and the MSc Biomedical Computing.</p>
         </div>
       </div>
       <div class="card">
         <div class="info">
-          <h3 class="title">Gymnasium - Het Goese Lyceum</h3>
+          <h4 class="title">Gymnasium [2012-2018] - Het Goese Lyceum</h4>
           <p>Dutch highschool track that prepares for science university degree (NT/NG). Research project: Sustainability of electric cars (9.0/10). </p>
         </div>
       </div>
@@ -308,12 +307,12 @@ ________________________________________________________________________________
 
 </pre>
 <p>At the moment I am working on many side projects, like <a href="https://github.com/MaEduard/maeduard.github.io">the website</a> you are cur-
-rently visiting, for example. Because most projects are work in progress, they are a bit of a mess to show directly here but as soon as they are presetable, I will share them here. A descriptive list is given nevertheless:</p>
+rently visiting, for example. Because most projects are work in progress, they are a bit of a mess to show directly here but as soon as they are presetable, I will share them here. Of course feel free to contact me if you'd like to discuss them in detail. A descriptive list is given here:</p>
 
 <ul>
     <li>FastTree algorithm implemenation (Python) </li>
-    <li>Network inference data processing pipeline (Python) </li>
-    <li>Genomic alignment project (Python, bedtools, samtools, DIAMOND, BLAST) </li>
+    <li>Network inference data processing pipeline. You can find the paper <a href="https://github.com/MaEduard/network_inference/blob/main/Honours_EduardMa_4660668.pdf">here</a> (Python) </li>
+    <li>Master thesis, report can be found <a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">here</a> (Python, bedtools, samtools, DIAMOND, BLAST)</li>
     <li>Detection of multipolar mitosis in brightfield imaging data (MATLAB, ImageJ)</li>
     <li>Online Chess game (Javascript, CSS, HTML)</li>
     <li>TU Delft's sport centre scheduling system (Java)</li>
@@ -329,10 +328,79 @@ ________________________________________________________________________________
 
 <span id=003>[<a class=t href=#003>003</a>]</span> SIDE-ACTIVITIES
 
+</pre>
+
+<ul>
+    <li>
+      <h4>Honours Project (TU Delft)</h4>
+      <p>In my free time I did a project under the supervision of Prof. Dr. Ir. Reinders and Dr. Villegas Morcillo. I reproduced a network inference framework <em>Zamanighomi</em> et al. that has been applied on scRNA-seq data to gain insight into the cell-specific gene-gene regulations. The work can be found <a href=https://github.com/MaEduard/network_inference/blob/main/Honours_EduardMa_4660668.pdf>here</a>.</p></li>
+    <li>
+      <h4>Student Consultant (ING)</h4>
+      <p>Consultancy project aimed at mapping out the possible investment opportunities of China's Silk Road Economic Belt, considering its economic, ecological, and political impact. I was the manager of the research group that consisted of 7 students.</p>
+    </li>
+    <li>
+      <h4>UNL Delegate & Public Speaking Trainer (Radboud University)</h4>
+      <p>An extracurricular program offered by Radboud University Nijmegen that teaches you public speaking, negotiation and leadership skills and trains students to participate in Model United Nation debates. It includes a 10 ECs course (United Nations and Multilateral Diplomacy: Theory and Practice). I have been both participant and trainer for the program.</p>
+    </li>
+    <li>
+      <h4>NAHSS Delegate & Projectcoach</h4>
+      <p>Selected to participate in the NAHSS program of 2021. The program is supported by the Dutch government, Dutch universities and several multinational companies. It is intended to provide 100 talented students with the opportunity to come into contact with a globalised business culture.</p>
+    </li>
+    <li>
+      <h4>Seeds For The Future Delegate (Huawei)</h4>
+      <p>In-house student program about AI, IoT, and green computing. Nominated and obtained the scholarship. </p>
+    </li>
+    <li>
+      <h4>Chinese language school</h4>
+      <p>Went to a Saturday school that teaches to speak, read, and write Mandarin.</p>
+    </li>
+    <li>
+      <h4>Zorggroep Terweel</h4>
+      <p>Assistant in taking care of elderly.</p>
+    </li>
+    <li>
+      <h4>Board member (NCBC)</h4>
+    </li>
+    <li>
+      <h4>Committee member family day Nanobiology</h4>
+      <p>Organizing the family-day for students of the Bsc. Nanobiology & part of the promotion team for the annual holiday.</p>
+    </li>
+</ul>
+
+<pre>
 ________________________________________________________________________________
 
 
-<span id=004>[<a class=t href=#004>004</a>]</span> REFEREES
+<span id=004>[<a class=t href=#004>004</a>]</span> (SIDE-)JOBS
+
+</pre>
+
+
+<ul>
+  <li>
+    <h4>Service Technician (Paysystems)</h4>
+    <p>Responsible for the maintenance of the payment hardware for festivals across the Netherlands, Belgium, and Germany. It's a very cool summer job with very fun people that I can recommend to anyone speaking Dutch. Check out there website for open vacancies <a href="https://paysystems.nl/vacatures/">here</a>.</p>
+  </li>
+  <li>
+    <h4>Teaching Assistant (TU Delft)</h4>
+    <p>Creating lab manuals, grading homework and exams, and explaining teaching materials to students of the Nanobiology program. Furthermore, I help them with the exercises during the lab hours. I assisted in the following courses:</p>
+    <ul>
+      <li>High Speed Scientific Computing (NB3016) - Head TA</li>
+      <li>Computational Sciences (NB2181)</li>
+      <li>Nanobiology Programming Center</li>
+    </ul>
+  </li>
+  <li>
+    <h4>Vaccine center (Red Cross)</h4>
+    <p>Prepared and administered vaccines during the covid pandemic</p>
+  </li>
+</ul>
+
+<pre>
+________________________________________________________________________________
+
+
+<span id=005>[<a class=t href=#005>005</a>]</span> REFEREES
 
 </pre>
 <p>If interested in a list of people that I have worked for or collaborated with, do not hesitate to reach out to me via the <a href=./contact.html>contact page</a>. Due to privacy reasons, I do not share it here.</p>
