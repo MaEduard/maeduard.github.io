@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,10 +8,11 @@
         body {
             background-color: black;
             color: aquamarine;
+            font-family: monospace;
         }
 
         a {
-            color: #34d5eb;
+            color: lightsalmon;
         }
 
         pre {
@@ -48,15 +49,39 @@
             display: inline-block;
         }
 
+        #a {
+            display: table;
+            margin: 16px auto;
+        }
+
+        .text-only {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: aquamarine solid 2px;
+            word-wrap: break-word;
+        }
+        
+        .drawing {
+            overflow-x: hidden;
+            white-space: pre;
+            text-align: center;
+        }
+
+        a:hover {
+            color: #a00;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <div style="display:table;margin:16px auto" id=a>
+
+    <div id=a>
         <div id=b>
-            <pre>
-<div class="nav-container"><a href="./index.html" class="t" style="color:#a00">
+            <div class="nav-container">
+                <a href="./index.html" class="t" style="color:#a00">
+                    <pre>
 ······························
 :   ___  ___    ___    __ __ :
 :  /  _]|   \  |   \  |  |  |:
@@ -65,43 +90,44 @@
 :|   [_ |     ||     ||___, |:
 :|     ||     ||     ||     |:
 :|_____||_____||_____||____/ :
-······························</a>
+······························</pre>
+                </a>
     <a href="./index.html">About</a>
     <a href="./resume.html">Resume</a>
     <a href="./publications.html">Publications</a>
     <a href="./contact.html">Contact</a>
     <span style="image-rendering:crisp-edges;vertical-align:sub;"><a href="https://github.com/MaEduard/" style="text-decoration: none;"><img id="g" alt="GitHub" src="data:image/gif;base64,R0lGODlhEAAQAPABAAAAAP//ACH5BAUIAAEALAAAAAAQABAAAAIojA2px6G/GJzgJASxbrI+jmVgGI3TSF4oZS6emmqw823dTFcWbklNAQA7"></a></span>
 </div>
-+-----------------------------------------------------------------------------+
-|                                                                             |
-|                                   CONTACT                                   |
-|                                                                             |
-+-----------------------------------------------------------------------------+
 
+<div class="drawing">
++------------------------------------------------------------------------------+
+|                                                                              |
+|                                  Contact                                     |
+|                                                                              |
++------------------------------------------------------------------------------+
+</div>
+
+
+<div class="text-only">
 GET IN TOUCH
 
-________________________________________________________________________________
-
-
-I recently graduated so as of now I am still looking for a place to kickstart 
+<p>I recently graduated so as of now I am still looking for a place to kickstart 
 my career in tech. My main interests are software development/engineering 
 and data analytics/engineering. Please do not hesitate to reach out to me by
-shooting me an email at: <a href="mailto:eduard.ma6@gmail.com">eduard.ma6@gmail.com</a>
+shooting me an email at: <a href="mailto:eduard.ma6@gmail.com">eduard.ma6@gmail.com</a></p>
 
-________________________________________________________________________________
-
-   ···········································································
-   :.######..#####...##..##...####...#####...#####...........##...##...####..:
-   :.##......##..##..##..##..##..##..##..##..##..##..........###.###..##..##.:
-   :.####....##..##..##..##..######..#####...##..##..........##.#.##..######.:
-   :.##......##..##..##..##..##..##..##..##..##..##..........##...##..##..##.:
-   :.######..#####....####...##..##..##..##..#####...........##...##..##..##.:
-   :.........................................................................:
-   ···········································································   
-
-                                     2024
-        <!-- <img src="images/me.jpeg" alt="Me in greece petting a new furry friend!" width="203"> -->
-        </pre>
+</div>
+<div class="drawing">
+···········································································
+:.######..#####...##..##...####...#####...#####...........##...##...####..:
+:.##......##..##..##..##..##..##..##..##..##..##..........###.###..##..##.:
+:.####....##..##..##..##..######..#####...##..##..........##.#.##..######.:
+:.##......##..##..##..##..##..##..##..##..##..##..........##...##..##..##.:
+:.######..#####....####...##..##..##..##..#####...........##...##..##..##.:
+:.........................................................................:
+···········································································
+2024
+                </div>
         </div>
     </div>
 </body>
