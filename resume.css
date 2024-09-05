@@ -13,6 +13,7 @@ padding: 20px;
 /* Card container */
 .card {
 position: relative;
+margin: auto;
 max-width: 500px;
 }
 
