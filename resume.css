@@ -121,7 +121,7 @@ right: -45px;
 
 .image {
     float: left;
-    width: 35%; /* Adjust as needed */
+    width: 30%; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     margin-right: 16px; /* Space between the image and text */
 }
