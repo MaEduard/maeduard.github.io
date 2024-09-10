@@ -63,7 +63,7 @@ p.text-only {
     /* Align items vertically in the center */
 }
 
-.nav-container a, .nav-container span {
+.nav-container a {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
