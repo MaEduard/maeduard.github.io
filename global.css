@@ -56,22 +56,25 @@ p.text-only {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: flex-start;
-    /* Evenly distribute space between items */
-    align-items: center;
+    display: table;
+    /* position: relative; */
+    width: 100%;
+    /* align-items: center; */
     /* Align items vertically in the center */
 }
 
-.nav-container a {
-    margin-right: 46px;
-    /* Optional: Add space between items */
+.nav-container a, .nav-container span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 img,
 #b {
     max-width: 80ch
 }
+
+
 
 #a {
     display: table;
@@ -81,8 +84,3 @@ img,
 #flag {
     width: 30px;
 }
-/* 
-#g {
-    filter: invert(1);
-    text-decoration: none;
-} */
