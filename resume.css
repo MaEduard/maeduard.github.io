@@ -14,7 +14,7 @@ padding: 20px;
 .card {
 position: relative;
 margin: auto;
-max-width: 500px;
+max-width: 80ch;
 }
 
 /* setting padding based on even or odd */
@@ -121,7 +121,7 @@ right: -45px;
 
 .image {
     float: left;
-    width: 200px; /* Adjust as needed */
+    width: 35%; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     margin-right: 16px; /* Space between the image and text */
 }
