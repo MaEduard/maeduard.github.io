@@ -35,7 +35,7 @@
 ······························</pre>
                 </a>
     <a href="./resume.html">Resume</a>
-    <a href="./publications.html">Publications</a>
+    <a href="./publications.html">Projects</a>
     <a href="./contact.html">Contact</a>
     <a href="https://github.com/MaEduard/" style="text-decoration: none;"><img id="g" alt="GitHub" src="data:image/gif;base64,R0lGODlhEAAQAPABAAAAAP//ACH5BAUIAAEALAAAAAAQABAAAAIojA2px6G/GJzgJASxbrI+jmVgGI3TSF4oZS6emmqw823dTFcWbklNAQA7"></a>
     <a href="./publications_nl.html" style="text-decoration: none; text-align:right;"><img id="flag" alt="Dutch version of the webpage" src=https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg></a>
@@ -43,14 +43,55 @@
     <div class="drawing">
 +------------------------------------------------------------------------------+
 |                                                                              |
-|                                 Publications                                 |
+|                                  Projects                                    |
 |                                                                              |
 +------------------------------------------------------------------------------+
     </div>
+    <div class="text-only">    
+        <p>As soon as projects are done and presentable, they will show up here. The list is far from finished, however.</p>
+    </div>
 
-<div class="text-only">    
-<p>Hopefully, my master thesis will be published soon. You can already check it out <a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">here</a>. TLDR: We screened high quality genomic data of AD patients and centenarians to see if we could find any viral sequences in their genomes, hinting at a possible viral link to AD pathology.</p>
+    <div class="text-only">
+        <pre>
+INDEX
+
+* Virus Screening .......................................................... [<a class=t href=#001>001</a>]
+* Mastermind ............................................................. [<a class=t href=#002>002</a>]
+* Network Inference....................................................... [<a class=t href=#003>003</a>]
+</pre>
 </div>
+
+<div class="text-only">
+    <span id=001>[<a class=t href=#001>001</a>]</span> Virus Screening
+
+    <p> <em>Abstract: </em>Ever since the origin of human life, we have been infected by a wide range of viruses. These pathogens have invaded our cells, leaving behind traces of their presence in our genome, known as endogenous viral elements (EVEs). Among the affected cells are neurons. The infectious hypothesis for Alzheimer's disease (AD) proposes that viral infections may serve as an environmental factor contributing to AD. In our study, we explored this hypothesis for the first time from an endogenous perspective by identifying EVEs in the genomes of both AD patients and cognitively healthy centenarians (CHCs).
+        Using a custom-built data processing pipeline, our findings reveal that the genomes of AD patients on average harbor more EVEs than those of CHCs (p=3.24e-4, incidence rate ratio (IRR) = 1.27). Furthermore, we identified specific chromosomal regions with a higher incidence of viral integration in the AD cohort across different virus families. Our data suggest that viral infections over time have increased the susceptibility to AD, underscoring the importance of preventive measures against infections.
+    </p>
+
+    <p>Thesis including details and code is online here: <a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82</a></p>
+
+</div>
+
+
+<div class="text-only">
+    <span id=002>[<a class=t href=#002>002</a>]</span> Mastermind
+
+    <p>A two-player version of the mastermind game implemented using a object-oriented design with websockets, Node.js, Express, Javascript, HTML, and CSS.</p>
+
+    <img src="images/splash.png" alt="Splash screen of the game" width="200px" style="display: block; margin: auto;">
+
+    Check out the repo here: <a href="https://github.com/MaEduard/mastermind/tree/main">https://github.com/MaEduard/mastermind/tree/main</a>
+</div>
+
+
+<div class="text-only">
+    <span id=003>[<a class=t href=#003>003</a>]</span> Network inference
+
+    <p>In my free time I did a project under the supervision of Prof. Dr. Ir. Reinders and Dr. Villegas Morcillo. I reproduced a network inference framework developed by Zamanighomi et al. that has been applied on scRNA-seq data to gain insight into the cell-specific gene-gene regulations. The work can be found here: <a href="https://github.com/MaEduard/network_inference/tree/main">https://github.com/MaEduard/network_inference/tree/main</a></p>
+
+    Find the report here: <a href="./downloads/Honours_EduardMa_4660668.pdf" download="Honours_EduardMa">pdf</a>
+</div>
+
 <div class="drawing">
 ···········································································
 :.######..#####...##..##...####...#####...#####...........##...##...####..:
@@ -64,6 +105,8 @@
                 </div>
     </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="javascripts/backgroundAnimation.js"></script>
 </body>
 
 </html>

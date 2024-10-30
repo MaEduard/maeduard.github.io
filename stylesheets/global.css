@@ -1,6 +1,10 @@
-body {
-    overflow-y: scroll;
-    font: 16px monospace, monospace
+body, html {
+    font: 16px monospace, monospace;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 pre {
@@ -42,6 +46,7 @@ pre {
     white-space: pre;
     text-align: center;
     border-bottom: aquamarine solid 2px;
+    animation: fadeIn 1s;
 }
 
 .text-only {
@@ -49,6 +54,7 @@ pre {
     padding-bottom: 10px;
     border-bottom: aquamarine solid 2px;
     word-wrap: break-word;
+    animation: fadeIn 1s;
 }
 
 p.text-only {
@@ -74,8 +80,6 @@ img,
     max-width: 80ch
 }
 
-
-
 #a {
     display: table;
     margin: 16px auto;
@@ -84,3 +88,8 @@ img,
 #flag {
     width: 30px;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
