@@ -1,0 +1,86 @@
+body {
+    overflow-y: scroll;
+    font: 16px monospace, monospace
+}
+
+pre {
+    margin: 0;
+    overflow-x: hidden
+}
+
+@media(max-width:999px) {
+    body {
+        font-size: 1.94vw
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    body {
+        background: #000;
+        color: aquamarine;
+    }
+
+    a {
+        color: lightsalmon;
+    }
+
+    a:hover {
+        color: #a00;
+    }
+
+    #g {
+        filter: invert(1)
+    }
+}
+
+.t {
+    text-decoration: none;
+}
+
+.drawing {
+    overflow-x: hidden;
+    white-space: pre;
+    text-align: center;
+    border-bottom: aquamarine solid 2px;
+}
+
+.text-only {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: aquamarine solid 2px;
+    word-wrap: break-word;
+}
+
+p.text-only {
+    max-width: 40px;
+}
+
+.nav-container {
+    display: table;
+    /* position: relative; */
+    width: 100%;
+    /* align-items: center; */
+    /* Align items vertically in the center */
+}
+
+.nav-container a {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+img,
+#b {
+    max-width: 80ch
+}
+
+
+
+#a {
+    display: table;
+    margin: 16px auto;
+}
+
+#flag {
+    width: 30px;
+}
