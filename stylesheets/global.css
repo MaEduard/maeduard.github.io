@@ -47,6 +47,7 @@ pre {
     text-align: center;
     border-bottom: aquamarine solid 2px;
     animation: fadeIn 1s;
+    width: 100%;
 }
 
 .text-only {

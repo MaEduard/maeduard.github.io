@@ -28,7 +28,7 @@ padding: 30px 30px 30px 0;
 content: "";
 position: absolute;
 width: 50%;
-border: dashed orange;
+border: dashed lightsalmon;
 }
 
 /* Setting the border of top, bottom, left */
@@ -100,7 +100,7 @@ width: 10px;
 height: 10px;
 background: aquamarine;
 border-radius: 999px;
-border: 3px solid orange;
+border: 3px solid lightsalmonorange;
 }
 
 /* text right if the card is even  */

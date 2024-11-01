@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Eduard zijn webpagina!</title>
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
     <meta name=Description content="This is my personal webpage created through github Pages and heavily inspired by the kisslinux.github.io webpage.">
     <meta name=viewport content="width=device-width,initial-scale=1">
 </head>
@@ -14,7 +15,7 @@
     <div id=a>
         <div id=b>
             <div class="nav-container">
-                <a href="./index.html" class="t" style="color:#a00;text-align: left;">
+                <a href="./index.html" class="t" style="color:lightsalmon;text-align: left;">
                     <pre>
 ······························
 :   ___  ___    ___    __ __ :
@@ -39,11 +40,23 @@
 |                                                                              |
 +------------------------------------------------------------------------------+
     </div>
+    
+    <div class="contact-form-container">
+        <form id="contactForm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mbljgkya"
+            method="post">
+            <fieldset id="fs-frm-inputs">
+                <label for="full-name">Naam</label>
+                <input type="text" name="name" id="full-name" placeholder="Naam" required="">
+                <label for="email-address">Email Adres</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="iemand@domain.com" required="">
+                <label for="message">Bericht</label>
+                <textarea rows="5" name="message" id="message" placeholder="Hoi Eduard, ...." required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" name="submit" id="submit-button" value="Verstuur">
+        </form>
+    </div>
 
-<div class="text-only">    
-<p>Neem gerust contact met mij op via: <a href="eduardma1999@proton.me">eduardma1999@proton.me</a></p>
-
-</div>
 <div class="drawing">
 ···········································································
 :.######..#####...##..##...####...#####...#####...........##...##...####..:

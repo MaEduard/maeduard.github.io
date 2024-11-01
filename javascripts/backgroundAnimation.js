@@ -46,9 +46,6 @@ var forward = true;
 function animate() {
     requestAnimationFrame(animate);
 
-    // Move camera through stars
-    // camera.position.z -= 0.1;
-
     if (counter < numberOfSteps) { 
         if (forward) {
             camera.position.z -= zInterval;

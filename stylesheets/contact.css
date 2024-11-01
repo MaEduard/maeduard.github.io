@@ -1,0 +1,51 @@
+.contact-form-container {
+    background-color: transparent;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: aquamarine solid 2px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: aquamarine;
+}
+
+fieldset {
+    border: green;
+    padding: 0px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid aquamarine;
+    background-color: black;
+    color: aquamarine;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#submit-button {
+    border-color: lightsalmon;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+
+}
+
+#submit-button:hover {
+    background-color: lightsalmon;
+}

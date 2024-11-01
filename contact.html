@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Eduard's contact page!</title>
     <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
     <meta charset=utf-8>
     <meta name=Description content="This is my personal webpage created through github Pages and heavily inspired by the kisslinux.github.io webpage.">
     <meta name=viewport content="width=device-width,initial-scale=1">
@@ -22,7 +23,7 @@
     <div id=a>
         <div id=b>
             <div class="nav-container">
-                <a href="./index.html" class="t" style="color:#a00;text-align: left;">
+                <a href="./index.html" class="t" style="color:lightsalmon;text-align: left;">
                     <pre>
 ······························
 :   ___  ___    ___    __ __ :
@@ -47,14 +48,26 @@
 |                                  Contact                                     |
 |                                                                              |
 +------------------------------------------------------------------------------+
+
 </div>
 
 
-<div class="text-only">
-GET IN TOUCH
-
-<p> Please do not hesitate to reach out to me by shooting me an email at: <a href="mailto:eduardma1999@proton.me">eduardma1999@proton.me</a></p>
-
+<div class="contact-form-container">
+    <form id="contactForm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mbljgkya"
+        method="post">
+        <fieldset id="fs-frm-inputs">
+            <label for="full-name">Name</label>
+            <input type="text" name="name" id="full-name" placeholder="Name" required="">
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="somebody@domain.com" required="">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message"
+                placeholder="Hi Eduard, ...."
+                required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" name="submit" id="submit-button" value="Submit">
+    </form>
 </div>
 <div class="drawing">
 ···········································································
