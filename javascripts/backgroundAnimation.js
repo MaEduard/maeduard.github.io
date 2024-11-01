@@ -36,21 +36,38 @@ const stars = new THREE.Points(starGeometry, starMaterial);
 scene.add(stars);
 
 // Set the initial camera position
+const zInterval = 0.1;
 camera.position.z = 1;
+const numberOfSteps = Math.round(900 / zInterval); 
+var counter = 0;
+var forward = true;
 
 // Animation function to simulate moving through space
 function animate() {
     requestAnimationFrame(animate);
 
     // Move camera through stars
-    camera.position.z -= 0.5;
-    if (camera.position.z < -1000) {
-        camera.position.z = 1;
+    // camera.position.z -= 0.1;
+
+    if (counter < numberOfSteps) { 
+        if (forward) {
+            camera.position.z -= zInterval;
+        } else {
+            camera.position.z += zInterval;
+        }
+        counter += 1;
+    } else {
+        counter = 0;
+        if (forward) {
+            forward = false;
+        } else {
+            forward = true;
+        }
     }
 
     // Rotate stars for effect
-    stars.rotation.x += 0.0005;
-    stars.rotation.y += 0.0005;
+    // stars.rotation.x += 0.0005;
+    // stars.rotation.y += 0.0005;
 
     renderer.render(scene, camera);
 }
