@@ -2,7 +2,7 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, document.documentElement.scrollHeight); // Set initial size
+renderer.setSize(window.innerWidth, document.documentElement.clientHeight); // Set initial size
 renderer.domElement.style.position = 'fixed'; // Position the canvas fixed behind everything
 renderer.domElement.style.top = '0';
 renderer.domElement.style.left = '0';
@@ -11,7 +11,7 @@ document.body.appendChild(renderer.domElement);
 
 // Resize renderer on window resize and scroll
 function updateRendererSize() {
-    renderer.setSize(window.innerWidth, document.documentElement.scrollHeight);
+    renderer.setSize(window.innerWidth, document.documentElement.clientHeight);
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 }
