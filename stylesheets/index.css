@@ -2,6 +2,17 @@ img {
     height: 100%;
 }
 
+@media(max-width:999px) {
+    #slider {
+        max-width: 320px;
+    }
+
+    #slider ul li {
+        max-width: 250px;
+        max-height: 150px;
+    }
+}
+
 #slider {
     position: relative;
     overflow: hidden;
@@ -62,8 +73,4 @@ a.control_prev {
 a.control_next {
     right: 0;
     border-radius: 2px 2px 2px 2px;
-}
-
-.read {
-    opacity: 0.5;
 }
