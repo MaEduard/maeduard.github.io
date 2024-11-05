@@ -1,12 +1,9 @@
-img {
-    height: 100%;
-}
 
 @media(max-width:999px) {
     #slider {
         max-width: 320px;
     }
-
+    
     #slider ul li {
         max-width: 250px;
         max-height: 150px;
@@ -39,6 +36,10 @@ img {
     background: transparent;
     text-align: center;
     line-height: 300px;
+}
+
+#slider a img {
+    height: 100%;
 }
 
 a.control_prev,
