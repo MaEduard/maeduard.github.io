@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     font: 16px monospace, monospace;
     overflow-x: hidden;
     margin: 0;
@@ -18,23 +19,21 @@ pre {
     }
 }
 
-@media(prefers-color-scheme:dark) {
-    body {
-        background: #000;
-        color: aquamarine;
-    }
+body {
+    background: #000;
+    color: aquamarine;
+}
 
-    a {
-        color: lightsalmon;
-    }
+a {
+    color: lightsalmon;
+}
 
-    a:hover {
-        color: #a00;
-    }
+a:hover {
+    color: #a00;
+}
 
-    #g {
-        filter: invert(1)
-    }
+#g {
+    filter: invert(1)
 }
 
 .t {
@@ -91,6 +90,11 @@ img,
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
