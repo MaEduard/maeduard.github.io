@@ -21,8 +21,8 @@ function updateRendererSize() {
         camera.updateProjectionMatrix();
     }
     else {
-        renderer.setSize(window.innerWidth, initialHeight);
-        camera.aspect = window.innerWidth / initialHeight;
+        renderer.setSize(initialWidth, initialHeight);
+        camera.aspect = initialWidth / initialHeight;
         camera.updateProjectionMatrix();
     }
 }
