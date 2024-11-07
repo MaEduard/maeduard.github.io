@@ -10,13 +10,13 @@ renderer.domElement.style.zIndex = '-1'; // Ensure it's in the background
 document.body.appendChild(renderer.domElement);
 
 // Resize renderer on window resize and scroll
-function updateRendererSize() {
-    renderer.setSize(window.innerWidth, visualViewport.height);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-}
-window.addEventListener('resize', updateRendererSize);
-window.addEventListener('scroll', updateRendererSize); // Update on scroll as well
+// function updateRendererSize() {
+    // renderer.setSize(window.innerWidth, visualViewport.height);
+    // camera.aspect = window.innerWidth / window.innerHeight;
+    // camera.updateProjectionMatrix();
+// }
+// window.addEventListener('resize', updateRendererSize);
+// window.addEventListener('scroll', updateRendererSize); // Update on scroll as well
 
 // Add a group of stars to the scene
 const starGeometry = new THREE.BufferGeometry();
