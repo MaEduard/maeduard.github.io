@@ -2,6 +2,8 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
+const initialWidth = visualViewport.width;
+const initialHeight = visualViewport.height;
 renderer.setSize(window.innerWidth, visualViewport.height); // Set initial size
 renderer.domElement.style.position = 'fixed'; // Position the canvas fixed behind everything
 renderer.domElement.style.top = '0';
@@ -10,13 +12,13 @@ renderer.domElement.style.zIndex = '-1'; // Ensure it's in the background
 document.body.appendChild(renderer.domElement);
 
 // Resize renderer on window resize and scroll
-// function updateRendererSize() {
-    // renderer.setSize(window.innerWidth, visualViewport.height);
-    // camera.aspect = window.innerWidth / window.innerHeight;
-    // camera.updateProjectionMatrix();
-// }
-// window.addEventListener('resize', updateRendererSize);
-// window.addEventListener('scroll', updateRendererSize); // Update on scroll as well
+function updateRendererSize(w, h) {
+    renderer.setSize(w, h);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', updateRendererSize(initialWidth, initialHeight));
+window.addEventListener('scroll', updateRendererSize(visualViewport.width, visualViewport.height)); // Update on scroll as well
 
 // Add a group of stars to the scene
 const starGeometry = new THREE.BufferGeometry();
