@@ -13,11 +13,6 @@ pre {
     overflow-x: hidden
 }
 
-@media(max-width:999px) {
-    body {
-        font-size: 1.94vw
-    }
-}
 
 body {
     background: #000;
@@ -32,12 +27,8 @@ a:hover {
     color: #a00;
 }
 
-#g {
-    filter: invert(1)
-}
-
-.t {
-    text-decoration: none;
+h4 {
+    color:aquamarine;
 }
 
 .drawing {
@@ -56,6 +47,54 @@ a:hover {
     word-wrap: break-word;
     animation: fadeIn 1s;
 }
+
+#logo {
+    color:lightsalmon;
+}
+
+#logo:hover {
+    color: #a00;
+}
+
+@media(max-width:999px) {
+    body {
+        font-size: 1.94vw;
+        background: linear-gradient(to left bottom, #f4a261 25%, #d33f34 50%, #a61322 50.1%, #410808 100%);
+        color: #F0F0F0;
+    }
+    a {
+        color: #F0F0F0;
+    }
+    
+    a:hover {
+        color: #000;
+    }    
+    .drawing {
+        border-bottom: #F0F0F0 solid 2px;
+    }
+    .text-only {
+        border-bottom: #F0F0F0 solid 2px;
+    }
+    #logo {
+        color: #F0F0F0;
+    }
+    #logo:hover {
+        color: #000;
+    }
+
+    h4 {
+        color:#F0F0F0;
+    }
+}
+
+#g {
+    filter: invert(1)
+}
+
+.t {
+    text-decoration: none;
+}
+
 
 p.text-only {
     max-width: 40px;

@@ -15,7 +15,7 @@
     <div id=a>
         <div id=b>
             <div class="nav-container">
-                <a href="./index.html" class="t" style="color:lightsalmon;text-align: left;">
+                <a id="logo" href="./index.html" class="t" style="text-align: left;">
                     <pre>
 ······························
 :   ___  ___    ___    __ __ :
@@ -168,7 +168,13 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="javascripts/backgroundAnimation.js"></script>
+    <script>
+        if (window.innerWidth > 999) {
+            var script = document.createElement('script');
+            script.src = 'javascripts/backgroundAnimation.js';
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="javascripts/slider.js"></script>
 </body>

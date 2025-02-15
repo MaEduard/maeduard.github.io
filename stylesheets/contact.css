@@ -49,3 +49,32 @@ textarea {
 #submit-button:hover {
     background-color: lightsalmon;
 }
+
+@media(max-width:999px) {
+    .contact-form-container {
+        border-bottom: #F0F0F0 solid 2px;
+    }
+    label {
+        color: #F0F0F0;
+    }
+    
+    fieldset {
+        border: #F0F0F0;
+    }
+    
+    input, textarea {
+        border: 1px solid #F0F0F0;
+        background-color: transparent;
+        color: #F0F0F0;
+    }
+
+    #submit-button {
+        border-color: #F0F0F0;
+        color: white;
+    }
+    
+    #submit-button:hover {
+        background-color: #c6b4b4;
+    }
+
+}
