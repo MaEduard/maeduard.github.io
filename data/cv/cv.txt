@@ -1,0 +1,114 @@
++================================================================================+
+|                                    EDUARD MA                                   |
+|--------------------------------------------------------------------------------|
+| Engineer – The Hague, NL                                                       |
+| Email:                                                                         |
+| LinkedIn: https://www.linkedin.com/in/eduard-ma                                |
+| GitHub: MaEduard                                                               |
++================================================================================+
+
++----------------------+---------------------------------------------------------+
+|        ABOUT ME      |  Software & data‑engineering enthusiast with a strong   |
+|                      |  focus on clean, secure, and agile solutions.           |
+|                      |  Passionate about cybersecurity, data‑privacy,          |
+|                      |  public speaking and sports.                            |
++----------------------+---------------------------------------------------------+
+
++----------------------+---------------------------------------------------------+
+|      EDUCATION       |  MSc Computer Science (cum laude, Honours)              |
+|                      |  TU Delft – 2022 – 2024                                 |
+|                      |   • Thesis (9.5/10) – supervised by Prof. Dr. Ir.       |
+|                      |     Reinders & Dr. N. Tesi (pre‑print available)        |
+|                      |   • Honours project (pre‑print)                         |
+|                      |                                                         |
+|                      |  Pre‑master Computer Science & Engineering              |
+|                      |  TU Delft – 2020 – 2022                                 |
+|                      |   • Core: OOP, Algorithms, Data Structures,             |
+|                      |     Reasoning & Logic, Software Quality, Testing,       |
+|                      |     Web & DB Tech, Information & Data Management,       |
+|                      |     Automata, Computability, Complexity,                |
+|                      |     Software Eng. Methods, Machine Learning             |
+|                      |                                                         |
+|                      |  Minor – Biomedical Computing – Technical Univ. of      |
+|                      |  Munich – 2019 (GPA 8.0)                                |
+|                      |                                                         |
+|                      |  BSc Nanobiology – TU Delft – 2017 – 2020 (GPA 8.2)     |
+|                      |   • Committee: Family‑day organization, promotion       |
+|                      |     team for student trips abroad                       |
+|                      |                                                         |
+|                      |  Gymnasium – Het Goese Lyceum – 2011 – 2017             |
+|                      |   • Research project: Sustainability of electric        |
+|                      |     cars (9.0/10)                                       |
++----------------------+---------------------------------------------------------+
+
++----------------------+---------------------------------------------------------+
+|      EXPERIENCE      |  Data Engineer – Shell, The Hague, NL                   |
+|                      |  Dec 2024 – Present                                     |
+|                      |   • WRFM‑DOS application development                    |
+|                      |   • Organised EmpowerHer 2025 career‑advice clinics     |
+|                      |   • Participant in Shell Graduate Programme             |
+|                      |                                                         |
+|                      |  Hardware Technician – Pay Systems, Lochem, NL          |
+|                      |  Apr 2022 – Sep 2024                                    |
+|                      |   • Maintained payment hardware for festivals across    |
+|                      |     NL, BE, DE                                          |
+|                      |                                                         |
+|                      |  Tech Consultant – ING, Delft, NL                       |
+|                      |  Mar 2021 – Sep 2021                                    |
+|                      |   • Managed a student research group                    |
+|                      |   • Analysed investment opportunities of the Silk       |
+|                      |     Road Economic Belt (economic, ecological,           |
+|                      |     political impact)                                   |
+|                      |                                                         |
+|                      |  Teaching Assistant – TU Delft, Delft, NL               |
+|                      |  Feb 2021 – Mar 2023                                    |
+|                      |   • HS‑Computing (NB3016) – Head TA (parallelising      |
+|                      |     scientific simulations)                             |
+|                      |   • Computational Sciences (NB2181) – TA (Monte         |
+|                      |     Carlo, genetic algorithms)                          |
+|                      |   • Nanobiology Programming Centre                      |
+|                      |                                                         |
+|                      |  Vaccinator & Vaccine Preparateur – Red Cross &         |
+|                      |  GGD Haaglanden, NL                                     |
+|                      |  Apr 2021 – Sep 2021                                    |
+|                      |                                                         |
+|                      |  Baker – Jumbo, Goes, NL                                |
+|                      |  Jun 2017 – Sep 2017                                    |
++----------------------+---------------------------------------------------------+
+
++----------------------+---------------------------------------------------------+
+|        SKILLS        |  Languages: Python, Java, JavaScript, C++               |
+|                      |  Web:       HTML, CSS, Node.js, Jekyll                  |
+|                      |  Cloud:     Azure (AZ900), AWS S3, Denodo               |
+|                      |  Data:      SQL, VQL, PySpark, Scikit‑learn,            |
+|                      |             PyTorch, SciPy, Pandas, NumPy,              |
+|                      |             Matplotlib                                  |
+|                      |  OS:        Linux (Ubuntu), Windows                     |
+|                      |  Tools:     Git, Bash, DevOps, DIAMOND, BLAST,          |
+|                      |             ImageJ, Tkinter, LaTeX, MATLAB              |
++----------------------+---------------------------------------------------------+
+
++----------------------+---------------------------------------------------------+
+|   EXTRA‑CURRICULAR   |  • UNL Delegate & Trainer – public speaking,            |
+|      ACTIVITIES      |    negotiation, Model UN (10 ECs)                       |
+|                      |  • NAHSS Delegate & Project Coach – honours program     |
+|                      |    (2021) – business‑culture immersion                  |
+|                      |  • Consultancy Project Coach – Rabobank (NAHSS 2022)    |
+|                      |  • Seeds For The Future Delegate – Huawei (AI, IoT,     |
+|                      |    green computing) – scholarship recipient             |
+|                      |  • Chinese language course – 1 year (Den Haag)          |
+|                      |  • Voluntary caretaker – elderly (Zorggroep Ter         |
+|                      |    Weel, Goes)                                          |
+|                      |  • Board member – NCBC (event organisation)             |
++----------------------+---------------------------------------------------------+
+
++----------------------+---------------------------------------------------------+
+|      LANGUAGES       |  Dutch – Native/Fluent                                  |
+|                      |  English – Fluent                                       |
+|                      |  Mandarin – Conversational                              |
+|                      |  Spanish – Beginner                                     |
++----------------------+---------------------------------------------------------+
+
++================================================================================+
+|                      References available upon request                         |
++================================================================================+

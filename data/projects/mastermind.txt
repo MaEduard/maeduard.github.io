@@ -1,0 +1,16 @@
+Project: Mastermind (two‑player game)
+-------------------------------------
+
+A web‑based implementation of the classic Mastermind board game.
+
+Technologies used
+* Node.js + Express (backend & WebSocket signalling)
+* Vanilla JavaScript, HTML & CSS (frontend)
+* Object‑oriented design, real‑time communication
+
+Features
+* Two players connect via WebSockets.
+* Turn‑based guessing with automatic feedback.
+* Simple, responsive UI with a splash screen.
+
+🎮 Play / view source: <a href="https://github.com/MaEduard/mastermind/tree/main" target="_blank">GitHub – mastermind</a>

@@ -1,0 +1,11 @@
+Project: Network Inference (scRNA‑seq)
+-------------------------------------
+
+Under the supervision of Prof. Dr. Ir. Reinders & Dr. Villegas Morcillo, I reproduced a network‑inference framework (Zamanighomi et al.) that extracts cell‑specific gene‑gene regulatory networks from single‑cell RNA‑seq data.
+
+Deliverables
+* Fully reproducible Python pipeline (available on GitHub).
+* Detailed report describing methodology, validation, and results.
+
+📄 Report (downloadable PDF): <a href="./downloads/Honours_EduardMa_4660668.pdf" download="Honours_EduardMa.pdf">Honours report</a>  
+💻 Code & data: <a href="https://github.com/MaEduard/network_inference/tree/main" target="_blank">GitHub – network_inference</a>

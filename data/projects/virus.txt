@@ -1,0 +1,14 @@
+Project: Virus Screening (abstract)
+----------------------------------
+
+<strong>Abstract</strong> – Ever since the origin of human life, we have been infected by a wide range of viruses.  
+These pathogens leave traces in our genome called <em>endogenous viral elements</em> (EVEs).  
+Our study compares EVEs in Alzheimer’s‑disease (AD) patients versus cognitively‑healthy centenarians (CHCs).
+
+Key findings
+* AD genomes harbour <strong>more EVEs</strong> (p = 3.24 × 10⁻⁴, IRR = 1.27).  
+* Specific chromosomal hotspots show higher viral integration in AD patients.
+
+<strong>Why it matters</strong> – Viral infections over a lifetime may increase susceptibility to AD, highlighting the importance of infection‑prevention strategies.
+
+📝 Full thesis & code: <a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82" target="_blank">TU‑Delft Repository</a>
