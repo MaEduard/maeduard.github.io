@@ -1,97 +1,154 @@
 /* ==== Basic reset ==== */
-* { box-sizing: border-box; margin:0; padding:0; }
-html, body { height:100%; font-family: Consolas, "Courier New", monospace; background:#1e1e1e; color:#c5c5c5; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family:  Consolas-Bold, monospace;
+  font-weight: 700;
+  background: #300A24;
+  color: #d6d7cf;
+  overflow-x: hidden; /* Prevent horizontal shifting */
+}
+
+html {
+  font-size: clamp(12px, 1.4vw, 17px);
+}
+
+/* Global font scaling */
+#cmd, #output, #prompt, .input-line {
+  font-size: 1.5rem;
+}
 
 /* ==== Terminal container ==== */
 #terminal {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem;
-    height: 100%;
-    display:flex;
-    flex-direction:column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ==== Output area ==== */
 #output {
-    flex:1;
-    overflow-y:auto;
-    white-space: pre-wrap;      /* keep line breaks */
-    word-break: break-all;      /* long filenames */
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;      /* Preserve terminal formatting */
+  word-break: normal;         /* Prevent mid‑word breaks */
+  overflow-wrap: anywhere;    /* Break only when needed */
 }
 
 /* ==== Input line ==== */
 .input-line {
-    display:flex;
-}
-.prompt {
-    margin-right:.5rem;
-    color:#00ff00;
-}
-#cmd {
-    flex:1;
-    background:none;
-    border:none;
-    outline:none;
-    color:#c5c5c5;
-    font: inherit;
-}
-
-/* ==== Scrollbars (optional, looks nicer on desktop) ==== */
-#output::-webkit-scrollbar { width:8px; }
-#output::-webkit-scrollbar-track { background:#2a2a2a; }
-#output::-webkit-scrollbar-thumb { background:#555; border-radius:4px; }
-
-/* ==== Responsive tweaks ==== */
-@media (max-width:600px) {
-    #terminal { padding:0.5rem; }
-    .prompt { margin-right:0.3rem; }
-}
-
-.folder {
-    color: #00bfff;          /* cyan‑blue */
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  margin-bottom: 5rem; /* your chosen spacing */
 }
 
 #prompt {
-    color: #00ff00;               /* same green as the old $ sign */
-    margin-right: 0.4rem;         /* space before the input field */
-    font-family: inherit;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: #a0b519;
+  margin-right: 0.4rem;
+  font-family: inherit;
 }
 
-/* Optional: make the username/device part a little lighter */
-#prompt .host {
-    color: #66ff66;
-}
-#prompt .path {
-    color: #aaffaa;
+/* Input stability */
+#cmd {
+  min-width: 0;               /* Critical: allows shrinking */
+  flex: 1;                    /* Fill remaining space */
+  white-space: nowrap;        /* Input cannot wrap */
+  overflow: hidden;           /* Prevent horizontal expansion */
+  text-overflow: clip;
+  background: none;
+  border: none;
+  outline: none;
+  color: #c5c5c5;
+  font: inherit;
 }
 
-/* ---- Tab‑completion hint list (optional) ---- */
+/* Scrollbars */
+#output::-webkit-scrollbar { width: 8px; }
+#output::-webkit-scrollbar-track { background: #2a2a2a; }
+#output::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+
+/* ==== Responsive tweaks ==== */
+@media (max-width: 600px) {
+  #terminal { padding: 0.5rem; }
+  .prompt { margin-right: 0.3rem; }
+}
+
+/* ==== Directory color ==== */
+.folder {
+  color: #00bfff; /* cyan-blue */
+}
+
+/* ==== Lighter username/path parts ==== */
+#prompt .host { color: #a0b519; }
+#prompt .path { color: rgb(159, 179, 34); }
+
+/* ==== Tab-completion hint ==== */
 .completion-hint {
-    color: #888;               /* light gray, easy on the eyes */
-    margin-top: 0.2rem;
-    font-size: 0.9em;
+  color: #888;
+  margin-top: 0.2rem;
+  font-size: 0.9em;
 }
 
-/* --------------------------------------------------------------
-   DISPLAYED IMAGE (used by the `display` command)
-   -------------------------------------------------------------- */
+/* ==== Displayed image container ==== */
 .display-image {
-    text-align: left;               /* centre the picture */
-    margin: 1rem auto;
+  text-align: center; /* actually center the picture */
+  margin: 1rem auto;
 }
 
-/* NEW: keep the picture inside the terminal frame */
+/* Image constraints */
 .display-image img {
-    /* 100% of the output area minus a small safety margin (≈2 rem) */
-    max-width: calc(100% - 2rem);
-    height: auto;                     /* preserve aspect ratio */
-    border: 2px solid #00ff00;        /* terminal‑green accent */
-    border-radius: 4px;
-    box-sizing: border-box;           /* include border in the width calc */
+  max-width: calc(100% - 2rem);
+  height: auto;
+  border: 2px solid #a0b519;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
+/* Echoed command text */
 .echo-line {
-    color: #00ff00;       /* terminal green – same as prompt */
-    /* you can tweak the hex value to whatever darkness you like */
+  color: #a0b519;
+  white-space: pre-wrap;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Smaller font for text files */
+.txt-file {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
+  text-align: center;        /* center each line */
+}
+
+/* Clickable items in ls */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: #a0b519;
+  color: #2d00f7;
+}
+
+
+/* Left-aligned variant for project text files */
+.txt-left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1rem;
 }

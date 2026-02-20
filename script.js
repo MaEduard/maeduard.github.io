@@ -7,12 +7,6 @@
     const cmdInput = document.getElementById('cmd');
     const promptEl = document.getElementById('prompt');
 
-    /* --------------------------------------------------------------
-       ASCII art that will be shown when the user types `welcome`
-       -------------------------------------------------------------- */
-    let WELCOME_ART = '';
-    let BOOKS_ART = '';
-
     /* ---------- NEW: renderPrompt ----------
        Shows: user@personal_device:<cwd>$   */
     function renderPrompt() {
@@ -59,24 +53,24 @@
     /* ---------- Populate the FS (keep your own entries) ---------- */
     function populateFS() {
         const root = fs['/'].children;
-        root['README.txt'] = { type: 'file', url: 'data/README.txt' };
-        root['cv.txt'] = { type: 'file', url: 'data/cv/cv.txt' };
-        root['books.txt'] = { type: 'file', url: 'data/books/bookshelf.txt' };
-        root['me.png'] = { type: 'file', url: 'images/me.png' };
+        root['README'] = { type: 'file-txt', url: 'data/art/welcome.txt' };
+        root['cv.txt'] = { type: 'file-txt', url: 'data/cv/cv.txt' };
+        root['books.txt'] = { type: 'file-txt', url: 'data/books/bookshelf.txt' };
+        root['me.png'] = { type: 'file-img', url: 'images/me.png' };
         // Projects folder
         root['projects'] = { type: 'dir', children: {} };
         const proj = root['projects'].children;
 
         proj['virus-screening.txt'] = {
-            type: 'file',
+            type: 'file-txt',
             url: 'data/projects/virus.txt'
         };
         proj['mastermind.txt'] = {
-            type: 'file',
+            type: 'file-txt',
             url: 'data/projects/mastermind.txt'
         };
         proj['network-inference.txt'] = {
-            type: 'file',
+            type: 'file-txt',
             url: 'data/projects/network_inference.txt'
         };
     }
@@ -104,70 +98,83 @@
         if (node.type !== 'dir') { echo(`cd: not a directory: ${target}`); return; }
         state.cwd = newPath;
         renderPrompt();                 // update prompt after cd
+        cmd_ls();
     }
 
     function cmd_pwd() { echo(state.cwd); }
 
-    function cmd_ls() {
-        const node = getNode(state.cwd);
-        if (!node || node.type !== 'dir') { echo('ls: cannot access: Not a directory'); return; }
-        const entries = Object.keys(node.children).sort();
-        const html = entries.map(name => {
-            const child = node.children[name];
-            return child.type === 'dir'
-                ? `<span class="folder">${name}</span>`
-                : name;
-        }).join('  ');
-        echoHTML(html);
+function cmd_ls() {
+  const node = getNode(state.cwd);
+  if (!node || node.type !== 'dir') {
+    echo('ls: cannot access: Not a directory');
+    return;
+  }
+
+  // Gather and sort real entries from the virtual FS
+  const entries = Object.keys(node.children).sort();
+
+  // Build the HTML list. If not at root, add a synthetic ".." first.
+  const parts = [];
+
+  // Add clickable ".." to go up one directory (only if not at root)
+  if (state.cwd !== '/') {
+    parts.push(
+      `<span class="clickable up-item" data-action="cd ..">..</span>`
+    );
+  }
+
+  // Then render real entries
+  for (const name of entries) {
+    const child = node.children[name];
+
+    if (child.type === 'dir') {
+      // Click → cd <dir>
+      parts.push(
+        `<span class="clickable folder" data-action="cd ${name}">${name}/</span>`
+      );
+    } else if (child.type === 'file-txt') {
+      // Click → cat <file>
+      parts.push(
+        `<span class="clickable" data-action="cat ${name}">${name}</span>`
+      );
+    } else if (child.type === 'file-img') {
+      // Click → display <image>
+      parts.push(
+        `<span class="clickable" data-action="display ${name}">${name}</span>`
+      );
+    } else {
+      // Fallback: plain name (non-clickable)
+      parts.push(name);
     }
+  }
+
+  // Print the row (space-separated) to your output
+  echoHTML(parts.join(' '));
+}
 
     async function cmd_cat(args) {
         if (!args.length) { echo('cat: missing operand'); return; }
         const filePath = resolvePath(state.cwd, args[0]);
         const node = getNode(filePath);
         if (!node) { echo(`cat: ${args[0]}: No such file or directory`); return; }
-        if (node.type !== 'file') { echo(`cat: ${args[0]}: Is a directory`); return; }
-        try {
-            const resp = await fetch(node.url);
-            if (!resp.ok) throw new Error('Network error');
-            const txt = await resp.text();
-            echoHTML(txt);
-        } catch (_) { echo(`cat: failed to read ${args[0]}`); }
+        if (node.type !== 'file-txt') { echo(`cat: ${args[0]}: Is not a text file`); return; }
+        else {
+            try {
+                const resp = await fetch(node.url);
+                if (!resp.ok) throw new Error('Network error');
+                const txt = await resp.text();
+
+                // Center by default, left-align if the file is under /projects
+                const isProjectsFile = filePath === '/projects' || filePath.startsWith('/projects/');
+                const wrapperClass = isProjectsFile ? 'txt-file txt-left' : 'txt-file';
+                echoHTML(`<div class="${wrapperClass}">${txt}</div>`);
+
+            } catch (_) { echo(`cat: failed to read ${args[0]}`); }
+        }
     }
 
     function cmd_clear() { outputEl.innerHTML = ''; }
     function cmd_exit() { location.reload(); }
-
-    function cmd_welcome() {
-        // Wrap in <pre> so whitespace is honoured
-        echoHTML('<pre>' + WELCOME_ART + '</pre>');
-    }
-
-    function cmd_books() {
-        // Wrap in <pre> so whitespace is honoured
-        echoHTML('<pre>' + BOOKS_ART + '</pre>');
-    }
-
-    /* --------------------------------------------------------------
-    ABOUT command – fetches about.md, renders it with Marked,
-    and prints the resulting HTML into the terminal output.
-    -------------------------------------------------------------- */
-    async function cmd_about() {
-        try {
-            const resp = await fetch('about.md');
-            if (!resp.ok) throw new Error('Network error');
-            const markdown = await resp.text();
-
-            // Convert Markdown → HTML (marked is loaded from the CDN)
-            const html = marked.parse(markdown);
-
-            // Wrap in a container so our CSS can target it
-            echoHTML(`<div class="markdown-body">${html}</div>`);
-        } catch (e) {
-            console.error(e);
-            echo('Unable to load the about page.');
-        }
-    }
 
 
     /* --------------------------------------------------------------
@@ -175,7 +182,7 @@
     -------------------------------------------------------------- */
     async function cmd_display(args) {
         if (!args.length) {
-            echo('display: missing filename (e.g. display image.png)');
+            echo('display: missing filename');
             return;
         }
 
@@ -184,12 +191,12 @@
         const node = getNode(filePath);
 
         // ------------------------------------------------------------------
-        // 1️⃣ If the file exists in the virtual FS, use its URL.
-        // 2️⃣ Otherwise fall back to a direct relative URL (works for a plain
+        // 1️ If the file exists in the virtual FS, use its URL.
+        // 2️ Otherwise fall back to a direct relative URL (works for a plain
         //    image placed next to index.html).
         // ------------------------------------------------------------------
         let imgUrl = null;
-        if (node && node.type === 'file') {
+        if (node && node.type === 'file-img') {
             imgUrl = node.url;                  // URL we already store for .txt files
         } else {
             // Assume the image lives next to index.html (or in a sub‑folder you
@@ -218,10 +225,7 @@
         cat: cmd_cat,
         clear: cmd_clear,
         exit: cmd_exit,
-        help: () => echo('Supported commands: cd, cd .., pwd, ls, cat <file>, clear, exit, welcome, books, about, display'),
-        welcome: cmd_welcome,
-        books: cmd_books,
-        about: cmd_about,
+        help: () => echo('Supported commands: cd, cd .., pwd, ls, cat <file>, clear, exit, books, display'),
         display: cmd_display          // <-- NEW command
     };
 
@@ -235,32 +239,6 @@
         const handler = commands[cmd];
         if (!handler) { echo(`${cmd}: command not found`); return; }
         try { await handler(rawArgs); } catch (e) { console.error(e); echo(`Error executing ${cmd}`); }
-    }
-
-    async function loadWelcomeArt() {
-        try {
-            const resp = await fetch('data/art/welcome.txt');   // path relative to the page
-            if (!resp.ok) throw new Error('Network error');
-            // Preserve line‑breaks exactly as they appear in the file
-            WELCOME_ART = await resp.text();
-        } catch (e) {
-            console.error('Failed to load welcome art:', e);
-            // Fallback – a short placeholder so the command still works
-            WELCOME_ART = '[welcome art could not be loaded]';
-        }
-    }
-
-    async function loadBooksArt() {
-        try {
-            const resp = await fetch('data/books/bookshelf.txt');   // path relative to the page
-            if (!resp.ok) throw new Error('Network error');
-            // Preserve line‑breaks exactly as they appear in the file
-            BOOKS_ART = await resp.text();
-        } catch (e) {
-            console.error('Failed to load books art:', e);
-            // Fallback – a short placeholder so the command still works
-            BOOKS_ART = '[books art could not be loaded]';
-        }
     }
 
     /* ---------- Event listener ---------- */
@@ -358,6 +336,26 @@
         }
     });
 
+    // Handle clickable LS items
+    outputEl.addEventListener('click', async (e) => {
+        const target = e.target.closest(".clickable");
+        if (!target) return;
+
+        const action = target.dataset.action;
+        if (!action) return;
+
+        // Echo it as if typed
+        echo(`$ ${action}`);
+
+        // Split & execute
+        const [cmd, ...args] = action.split(/\s+/);
+        const handler = commands[cmd];
+
+        if (handler) {
+            await handler(args);
+        }
+    });
+
     document.addEventListener('click', (e) => {
         // If the click originated inside a link, ignore it.
         const isLink = e.target.closest('a');
@@ -370,9 +368,8 @@
 
     /* ---------- Initialise ---------- */
     populateFS();
-    await loadWelcomeArt();
-    await loadBooksArt();
     renderPrompt();                     // draw the initial prompt
     echo('Welcome! Type "help" for a list of commands.');
+    await runCommand("ls");
     cmdInput.focus();
 })();
