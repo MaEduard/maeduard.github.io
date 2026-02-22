@@ -15,11 +15,20 @@ Currently a software- & data-engineering passionate about clean, secure, and mod
 EDUCATION
 ─────────
 • MSc Computer Science (cum laude, Honours) – TU Delft (2022‑2024)
-  - Master thesis (9.5/10) – supervised by Prof. Dr. Ir. Reinders & Dr. N. Tesi (<a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">pre‑print</a>)
+  - Master thesis (9.5/10) (<a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">pre‑print</a>)
   - Honours project (<a href="./downloads/Honours_EduardMa_4660668.pdf" download="Honours_EduardMa">pdf</a>)
 
 • Pre‑master Computer Science & Engineering – TU Delft (2020‑2022)
-  - OOP, Algorithms & Data Structures, Reasoning & Logic, Software Quality & Testing, Web And Database Technology, Information and Data Management, Automata, Computability, and Complexity, Software Engineering Methods, Machine Learning
+  - OOP
+  - Algorithms & Data Structures
+  - Reasoning & Logic
+  - Software Quality & Testing
+  - Web and Database Technology
+  - Information and Data Management
+  - Automata
+  - Computability and Complexity
+  - Software Engineering Methods
+  - Machine Learning
 
 • Minor Biomedical Computing – Technical University of Munich (2019) – GPA 8.0
 
@@ -33,21 +42,23 @@ EDUCATION
 EXPERIENCE
 ──────────
 • Data Engineer – Shell, The Hague (Dec 2024 – Present)
-  * Developed WRFM‑DOS application
-  * Organized EmpowerHer 2025 career‑advice clinics
-  * Participated in Shell Graduate Programme
+  - Developed WRFM‑DOS application
+  - Organized EmpowerHer 2025 career‑advice clinics
+  - Participated in Shell Graduate Programme
 
 • Hardware Technician – Pay Systems, Lochem (Apr 2022 – Sep 2024)
-  * Maintained payment hardware for festivals across NL, BE, DE
+  - Maintained payment hardware for festivals in Benelux
 
 • Tech Consultant – ING, Delft (Mar 2021 – Sep 2021)
-  * Managed a student research group
-  * Analyzed investment scenarios for the Silk Road Economic Belt
+  - Managed a student research group
+  - Analyzed investment scenarios for the Silk Road Economic Belt
 
 • Teaching Assistant – TU Delft (Feb 2021 – Mar 2023)
-  * HS‑Scientific Computing (Head TA – parallelisation)
-  * Computational Sciences (Monte‑Carlo, genetic algorithms)
-  * Nanobiology Programming Centre
+  - HS‑Scientific Computing 
+    (parallelisation)
+  - Computational Sciences 
+    (Monte‑Carlo, genetic algorithms)
+  - Nanobiology Programming Centre
 
 • Vaccinator & Vaccine Preparateur – Red Cross & GGD Haaglanden (Apr 2021 – Sep 2021)
 
