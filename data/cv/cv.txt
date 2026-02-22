@@ -11,6 +11,7 @@ ABOUT ME
 ────────
 Currently a software- & data-engineering passionate about clean, secure, and modular code. Outside of engineering, I also love reading, gaming, and I have a keen interest in public speaking and sports. 
 
+
 EDUCATION
 ─────────
 • MSc Computer Science (cum laude, Honours) – TU Delft (2022‑2024)
@@ -27,6 +28,7 @@ EDUCATION
 
 • Havo/VWO/Gymnasium – Het Goese Lyceum (2012-2017)
   - Research project: Sustainability of electric cars (9.0/10).
+
 
 EXPERIENCE
 ──────────
@@ -47,9 +49,9 @@ EXPERIENCE
   * Computational Sciences (Monte‑Carlo, genetic algorithms)
   * Nanobiology Programming Centre
 
-Vaccinator & Vaccine Preparateur – Red Cross & GGD Haaglanden (Apr 2021 – Sep 2021)
+• Vaccinator & Vaccine Preparateur – Red Cross & GGD Haaglanden (Apr 2021 – Sep 2021)
 
-Baker – Jumbo, Goes (Jun 2017 – Sep 2017)
+• Baker – Jumbo, Goes (Jun 2017 – Sep 2017)
 
 
 SKILLS
@@ -75,12 +77,14 @@ data to gain insight into the cell-specific gene-gene regulations.
 • Modelling the emissions of the train network of China’s Belt & Road initiative - ING (Python)
 • More info at my github.io (HTML, CSS)
 
+
 LANGUAGES
 ─────────
 Dutch – Native/Fluent
 English – Fluent
 Mandarin (Chinese) – Conversational
 Spanish – Beginner
+
 
 REFERENCES
 ──────────
