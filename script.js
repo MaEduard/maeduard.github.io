@@ -53,7 +53,7 @@
     /* ---------- Populate the FS (keep your own entries) ---------- */
     function populateFS() {
         const root = fs['/'].children;
-        root['README'] = { type: 'file-txt', url: 'data/art/welcome.txt' };
+        // root['README'] = { type: 'file-txt', url: 'data/art/welcome.txt' };
         root['cv.txt'] = { type: 'file-txt', url: 'data/cv/cv.txt' };
         root['books.txt'] = { type: 'file-txt', url: 'data/books/bookshelf.txt' };
         root['me.png'] = { type: 'file-img', url: 'images/me.png' };
@@ -103,54 +103,54 @@
 
     function cmd_pwd() { echo(state.cwd); }
 
-function cmd_ls() {
-  const node = getNode(state.cwd);
-  if (!node || node.type !== 'dir') {
-    echo('ls: cannot access: Not a directory');
-    return;
-  }
+    function cmd_ls() {
+        const node = getNode(state.cwd);
+        if (!node || node.type !== 'dir') {
+            echo('ls: cannot access: Not a directory');
+            return;
+        }
 
-  // Gather and sort real entries from the virtual FS
-  const entries = Object.keys(node.children).sort();
+        // Gather and sort real entries from the virtual FS
+        const entries = Object.keys(node.children).sort();
 
-  // Build the HTML list. If not at root, add a synthetic ".." first.
-  const parts = [];
+        // Build the HTML list. If not at root, add a synthetic ".." first.
+        const parts = [];
 
-  // Add clickable ".." to go up one directory (only if not at root)
-  if (state.cwd !== '/') {
-    parts.push(
-      `<span class="clickable up-item" data-action="cd ..">..</span>`
-    );
-  }
+        // Add clickable ".." to go up one directory (only if not at root)
+        if (state.cwd !== '/') {
+            parts.push(
+                `<span class="clickable up-item" data-action="cd ..">..</span>`
+            );
+        }
 
-  // Then render real entries
-  for (const name of entries) {
-    const child = node.children[name];
+        // Then render real entries
+        for (const name of entries) {
+            const child = node.children[name];
 
-    if (child.type === 'dir') {
-      // Click → cd <dir>
-      parts.push(
-        `<span class="clickable folder" data-action="cd ${name}">${name}/</span>`
-      );
-    } else if (child.type === 'file-txt') {
-      // Click → cat <file>
-      parts.push(
-        `<span class="clickable" data-action="cat ${name}">${name}</span>`
-      );
-    } else if (child.type === 'file-img') {
-      // Click → display <image>
-      parts.push(
-        `<span class="clickable" data-action="display ${name}">${name}</span>`
-      );
-    } else {
-      // Fallback: plain name (non-clickable)
-      parts.push(name);
+            if (child.type === 'dir') {
+                // Click → cd <dir>
+                parts.push(
+                    `<span class="clickable folder" data-action="cd ${name}">${name}/</span>`
+                );
+            } else if (child.type === 'file-txt') {
+                // Click → cat <file>
+                parts.push(
+                    `<span class="clickable" data-action="cat ${name}">${name}</span>`
+                );
+            } else if (child.type === 'file-img') {
+                // Click → display <image>
+                parts.push(
+                    `<span class="clickable" data-action="display ${name}">${name}</span>`
+                );
+            } else {
+                // Fallback: plain name (non-clickable)
+                parts.push(name);
+            }
+        }
+
+        // Print the row (space-separated) to your output
+        echoHTML(parts.join(' '));
     }
-  }
-
-  // Print the row (space-separated) to your output
-  echoHTML(parts.join(' '));
-}
 
     async function cmd_cat(args) {
         if (!args.length) { echo('cat: missing operand'); return; }
@@ -165,8 +165,7 @@ function cmd_ls() {
                 const txt = await resp.text();
 
                 // Center by default, left-align if the file is under /projects
-                const isProjectsFile = filePath === '/projects' || filePath.startsWith('/projects/');
-                const wrapperClass = isProjectsFile ? 'txt-file txt-left' : 'txt-file';
+                const wrapperClass = 'txt-file txt-left';
                 echoHTML(`<div class="${wrapperClass}">${txt}</div>`);
 
             } catch (_) { echo(`cat: failed to read ${args[0]}`); }
@@ -356,15 +355,16 @@ function cmd_ls() {
         }
     });
 
-    document.addEventListener('click', (e) => {
-        // If the click originated inside a link, ignore it.
-        const isLink = e.target.closest('a');
-        // If the click is already on the input, ignore (it’s already focused).
-        const isInput = e.target === cmdInput;
-        if (!isLink && !isInput) {
-            cmdInput.focus();
-        }
-    });
+    // Event listener to focus the input when clicking anywhere (except on links or the input itself)
+    // document.addEventListener('click', (e) => {
+    //     // If the click originated inside a link, ignore it.
+    //     const isLink = e.target.closest('a');
+    //     // If the click is already on the input, ignore (it’s already focused).
+    //     const isInput = e.target === cmdInput;
+    //     if (!isLink && !isInput) {
+    //         cmdInput.focus();
+    //     }
+    // });
 
     /* ---------- Initialise ---------- */
     populateFS();

@@ -1,115 +1,80 @@
-+=====================================================================+
-|                              EDUARD MA                              |
-|---------------------------------------------------------------------|
-| Engineer – The Hague, NL                                            |
-| LinkedIn: https://www.linkedin.com/in/eduard-ma                     |
-| GitHub: MaEduard                                                    |
-+=====================================================================+
+Eduard MA – Engineer
+────────────────────
+Location: The Hague, NL
+Email:   
+LinkedIn: https://www.linkedin.com/in/eduard-ma
+Portfolio: https://maeduard.github.io/
 
-+-------------+-------------------------------------------------------+
-|   ABOUT ME  |  Software & data‑engineering enthusiast with a strong |
-|             |  focus on clean, secure, and agile solutions.         |
-|             |  Passionate about cybersecurity, data‑privacy,        |
-|             |  public speaking and sports.                          |
-+-------------+-------------------------------------------------------+
 
-+-------------+-------------------------------------------------------+
-| EDUCATION   |  MSc Computer Science (cum laude, Honours)            |
-|             |  TU Delft – 2022 – 2024                               |
-|             |   • Thesis (9.5/10) – supervised by Prof. Dr. Ir.     |
-|             |     Reinders & Dr. N. Tesi (pre‑print available)      |
-|             |   • Honours project (pre‑print)                       |
-|             |                                                       |
-|             |  Pre‑master Computer Science & Engineering            |
-|             |  TU Delft – 2020 – 2022                               |
-|             |   • Core: OOP, Algorithms, Data Structures,           |
-|             |     Reasoning & Logic, Software Quality, Testing,     |
-|             |     Web & DB Tech, Information & Data Management,     |
-|             |     Automata, Computability, Complexity,              |
-|             |     Software Eng. Methods, Machine Learning           |
-|             |                                                       |
-|             |  Minor – Biomedical Computing – Technical Univ. of    |
-|             |  Munich – 2019 (GPA 8.0)                              |
-|             |                                                       |
-|             |  BSc Nanobiology – TU Delft – 2017 – 2020 (GPA 8.2)   |
-|             |   • Committee: Family‑day organization, promotion     |
-|             |     team for student trips abroad                     |
-|             |                                                       |
-|             |  Gymnasium – Het Goese Lyceum – 2012 – 2017           |
-|             |   • Research project: Sustainability of electric      |
-|             |     cars (9.0/10)                                     |
-|             |                                                       |
-|             |  HAVO/VWO – Het Goese Lyceum – 2011 – 2012            |
-+-------------+-------------------------------------------------------+
+ABOUT ME
+────────
+Software & data‑engineer passionate about clean code, science, gaming, sports, and books. 
 
-+-------------+-------------------------------------------------------+
-| EXPERIENCE  |  Data Engineer – Shell, The Hague, NL                 |
-|             |  Dec 2024 – Present                                   |
-|             |   • WRFM‑DOS application development                  |
-|             |   • Organised EmpowerHer 2025 career‑advice clinics   |
-|             |   • Participant in Shell Graduate Programme           |
-|             |                                                       |
-|             |  Hardware Technician – Pay Systems, Lochem, NL        |
-|             |  Apr 2022 – Sep 2024                                  |
-|             |   • Maintained payment hardware for festivals across  |
-|             |     NL, BE, DE                                        |
-|             |                                                       |
-|             |  Tech Consultant – ING, Delft, NL                     |
-|             |  Mar 2021 – Sep 2021                                  |
-|             |   • Managed a student research group                  |
-|             |   • Analysed investment opportunities of the Silk     |
-|             |     Road Economic Belt (economic, ecological,         |
-|             |     political impact)                                 |
-|             |                                                       |
-|             |  Teaching Assistant – TU Delft, Delft, NL             |
-|             |  Feb 2021 – Mar 2023                                  |
-|             |   • HS‑Computing (NB3016) – Head TA (parallelising    |
-|             |     scientific simulations)                           |
-|             |   • Computational Sciences (NB2181) – TA (Monte       |
-|             |     Carlo, genetic algorithms)                        |
-|             |   • Nanobiology Programming Centre                    |
-|             |                                                       |
-|             |  Vaccinator & Vaccine Preparateur – Red Cross &       |
-|             |  GGD Haaglanden, NL                                   |
-|             |  Apr 2021 – Sep 2021                                  |
-|             |                                                       |
-|             |  Baker – Jumbo, Goes, NL                              |
-|             |  Jun 2017 – Sep 2017                                  |
-+-------------+-------------------------------------------------------+
 
-+-------------+-------------------------------------------------------+
-|   SKILLS    |  Languages: Python, Java, JavaScript, C++             |
-|             |  Web:       HTML, CSS, Node.js, Jekyll                |
-|             |  Cloud:     Azure (AZ900), AWS S3, Denodo             |
-|             |  Data:      SQL, VQL, PySpark, Scikit‑learn,          |
-|             |             PyTorch, SciPy, Pandas, NumPy,            |
-|             |             Matplotlib                                |
-|             |  OS:        Linux (Ubuntu), Windows                   |
-|             |  Tools:     Git, Bash, DevOps, DIAMOND, BLAST,        |
-|             |             ImageJ, Tkinter, LaTeX, MATLAB            |
-+-------------+-------------------------------------------------------+
+EDUCATION
+─────────
+• MSc Computer Science (cum laude, Honours) – TU Delft (2022‑2024)
+  - Master thesis (9.5/10) – supervised by Prof. Dr. Ir. Reinders & Dr. N. Tesi (pre‑print)
+  - Honours project (pre‑print)
 
-+-------------+-------------------------------------------------------+
-|   EXTRA-    |  • UNL Delegate & Trainer – public speaking,          |
-|  CURRICULAR |    negotiation, Model UN (10 ECs)                     |
-|  ACTIVITIES |  • NAHSS Delegate & Project Coach – honours program   |
-|             |    (2021) – business‑culture immersion                |
-|             |  • Consultancy Project Coach – Rabobank (NAHSS 2022)  |
-|             |  • Seeds For The Future Delegate – Huawei (AI, IoT,   |
-|             |    green computing) – scholarship recipient           |
-|             |  • Chinese language course – 1 year (Den Haag)        |
-|             |  • Voluntary caretaker – elderly (Zorggroep Ter       |
-|             |    Weel, Goes)                                        |
-|             |  • Board member – NCBC                                |
-+-------------+-------------------------------------------------------+
+• Pre‑master Computer Science & Engineering – TU Delft (2020‑2022)
+  - OOP, Algorithms, Data Structures, Software Quality, Web & DB Tech, Machine Learning
 
-+-------------+-------------------------------------------------------+
-| LANGUAGES   |  Dutch – Native/Fluent                                |
-|             |  English – Fluent                                     |
-|             |  Mandarin – Conversational                            |
-|             |  Spanish – Beginner                                   |
-+-------------+-------------------------------------------------------+
+• Minor Biomedical Computing – Technical University of Munich (2019) – GPA 8.0
 
-+=====================================================================+
-|                   References available upon request                 |
-+=====================================================================+
+• BSc Nanobiology – TU Delft (2017‑2020) – GPA 8.2
+  - Organized student family‑day events and promotion trips
+
+• Havo/VWO/Gymnasium – Het Goese Lyceum (2012-2017)
+
+
+EXPERIENCE
+──────────
+• Data Engineer – Shell, The Hague (Dec 2024 – Present)
+  * Developed WRFM‑DOS application
+  * Organized EmpowerHer 2025 career‑advice clinics
+  * Participated in Shell Graduate Programme
+
+• Hardware Technician – Pay Systems, Lochem (Apr 2022 – Sep 2024)
+  * Maintained payment hardware for festivals across NL, BE, DE
+
+• Tech Consultant – ING, Delft (Mar 2021 – Sep 2021)
+  * Managed a student research group
+  * Analyzed investment scenarios for the Silk Road Economic Belt
+
+• Teaching Assistant – TU Delft (Feb 2021 – Mar 2023)
+  * HS‑Scientific Computing (Head TA – parallelisation)
+  * Computational Sciences (Monte‑Carlo, genetic algorithms)
+  * Nanobiology Programming Centre
+
+Vaccinator & Vaccine Preparateur – Red Cross & GGD Haaglanden (Apr 2021 – Sep 2021)
+
+Baker – Jumbo, Goes (Jun 2017 – Sep 2017)
+
+
+SKILLS
+──────
+<em>Languages</em>:      Python, Java, JavaScript, C++
+<em>Web/Cloud</em>:      HTML, CSS, Node.js, Jekyll, Azure (AZ900), AWS S3, Denodo
+<em>Data Science</em>:   SQL, VQL, PySpark, scikit‑learn, PyTorch, SciPy, Pandas, NumPy, Matplotlib
+<em>Tools/OS</em>:       Git, Bash, Docker, DevOps, DIAMOND, BLAST, ImageJ, Tkinter, LaTeX, MATLAB, Linux (Ubuntu), Windows
+
+
+PROJECTS (quick links)
+──────────────────────
+• Mastermind – two‑player web game: https://github.com/MaEduard/mastermind/tree/main
+• Network Inference – scRNA‑seq regulatory‑network pipeline: https://github.com/MaEduard/network_inference/tree/main
+• Virus Screening – EVEs in Alzheimer’s vs. healthy centenarians: https://github.com/MaEduard/virus_screening
+
+
+LANGUAGES
+─────────
+Dutch – Native/Fluent
+English – Fluent
+Mandarin (Chinese) – Conversational
+Spanish – Beginner
+
+
+REFERENCES
+──────────
+Available on request – contact via email.
