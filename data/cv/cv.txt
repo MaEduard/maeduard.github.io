@@ -73,8 +73,8 @@ SKILLS
 <em>Tools/OS</em>:       Git, Bash, Docker, DevOps, DIAMOND, BLAST, ImageJ, Tkinter, LaTeX, MATLAB, Linux (Ubuntu), Windows
 
 
-PROJECTS (quick links)
-──────────────────────
+PROJECTS 
+────────
 • Virus Screening – EVEs in Alzheimer’s vs. healthy centenarians
 • FastTree algorithm implementation reproduction (Python)
 • Network inference data processing pipeline: A network inference framework that has been applied on scRNA-seq
