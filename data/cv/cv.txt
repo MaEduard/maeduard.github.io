@@ -15,10 +15,10 @@ EDUCATION
 ─────────
 • MSc Computer Science (cum laude, Honours) – TU Delft (2022‑2024)
   - Master thesis (9.5/10) – supervised by Prof. Dr. Ir. Reinders & Dr. N. Tesi (<a href="https://repository.tudelft.nl/record/uuid:9d60b351-4dbf-46f7-ac0b-b06f54453c82">pre‑print</a>)
-  - Honours project (pre‑print<a href="./downloads/Honours_EduardMa_4660668.pdf" download="Honours_EduardMa">pdf</a>)
+  - Honours project (<a href="./downloads/Honours_EduardMa_4660668.pdf" download="Honours_EduardMa">pdf</a>)
 
 • Pre‑master Computer Science & Engineering – TU Delft (2020‑2022)
-  - OOP, Algorithms & Data Structures, Reasoning & Logic, Software Quality & Testing, WebAnd Database Technology, Information and Data Management, Automata, Computability, and Complexity, Software Engineering Methods, Machine Learning
+  - OOP, Algorithms & Data Structures, Reasoning & Logic, Software Quality & Testing, Web And Database Technology, Information and Data Management, Automata, Computability, and Complexity, Software Engineering Methods, Machine Learning
 
 • Minor Biomedical Computing – Technical University of Munich (2019) – GPA 8.0
 
